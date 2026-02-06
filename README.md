@@ -1,194 +1,186 @@
-📄 RESUME CATEGORY PREDICTION USING PERCEPTRON & NLP
-An NLP-Powered Machine Learning Project
-🚀 Project Overview
+# 📄 RESUME CATEGORY PREDICTION USING PERCEPTRON & NLP  
+### 🚀 An NLP-Powered Machine Learning Project
 
-This project focuses on building a Resume Category Prediction System using Natural Language Processing (NLP) and the Perceptron machine learning algorithm.
-The system automatically analyzes resume content and classifies it into predefined job categories, helping automate the resume screening process.
+---
 
-The project demonstrates the complete machine learning lifecycle, including data preprocessing, feature extraction, model training, evaluation, and deployment using Python.
+## 📌 Project Overview
 
-🎯 Problem Statement
+This project focuses on building a **Resume Category Prediction System** using  
+**Natural Language Processing (NLP)** and the **Perceptron machine learning algorithm**.
 
-Manual resume screening is time-consuming, repetitive, and inefficient.
-Recruiters often spend significant time reviewing resumes to identify suitable job roles.
+The system automatically analyzes resume text and classifies it into **predefined job categories**, helping to automate the resume screening process.
 
-This project aims to automate resume screening by predicting the most suitable job category for a given resume using machine learning techniques.
+This project demonstrates the **complete machine learning workflow**, including:
+- Text preprocessing
+- Feature extraction
+- Model training
+- Evaluation
+- Deployment using Streamlit
 
-🧠 Solution Approach
+---
 
-The solution follows a structured NLP and Machine Learning pipeline:
+## 🎯 Problem Statement
 
-📥 1. Data Loading
+Manual resume screening is **time-consuming and inefficient**.  
+Recruiters often need to review hundreds of resumes to identify suitable roles.
 
-Resume dataset containing resume text and job categories
+This project aims to **automate resume screening** by predicting the **most suitable job category** for a resume using machine learning.
 
-🧹 2. Text Preprocessing
+---
 
-Removal of HTML tags
+## 🧠 Solution Approach
 
-Conversion of text to lowercase
+The solution follows a structured **NLP + Machine Learning pipeline**:
 
-Removal of special characters and stopwords
+### 📥 1. Data Loading
+- Resume dataset containing resume text and job categories
 
-Lemmatization for word normalization
+### 🧹 2. Text Preprocessing
+- Removal of HTML tags  
+- Conversion to lowercase  
+- Removal of special characters and stopwords  
+- Lemmatization for word normalization  
 
-🔎 3. Feature Extraction
+### 🔎 3. Feature Extraction
+- TF-IDF (Term Frequency – Inverse Document Frequency)
+- Unigrams and Bigrams
+- Feature size optimization for efficiency
 
-TF-IDF (Term Frequency – Inverse Document Frequency)
+### 🤖 4. Model Training
+- Perceptron (Linear Classifier)
+- Balanced class weights
+- Regularization to reduce overfitting
 
-Unigrams and Bigrams
+### 📊 5. Model Evaluation
+- Test accuracy
+- Precision, Recall, and F1-score
+- 5-fold Cross-Validation
+- Confusion Matrix analysis
 
-Feature size optimization for efficiency
+### 🌐 6. Deployment
+- Interactive **Streamlit Web Application**
+- Real-time resume category prediction
 
-🤖 4. Model Training
+---
 
-Perceptron (Linear Classifier)
+## 🗂️ Dataset Information
 
-Balanced class weights
+The dataset consists of resumes labeled with job categories.
 
-Regularization to reduce overfitting
+**Key Columns:**
+- `Resume_str` – Resume text  
+- `Category` – Job category label  
 
-📊 5. Model Evaluation
+**Sample Categories:**
+- HR  
+- Data Science  
+- Software Developer  
+- Web Developer  
+- DevOps  
+- Testing / QA  
 
-Test accuracy
+---
 
-Precision, Recall, and F1-score
+## ⚙️ Tech Stack
 
-5-fold Cross-Validation
+- **Programming Language:** Python  
+- **Libraries:**  
+  - Pandas  
+  - NumPy  
+  - Scikit-Learn  
+  - NLTK  
+  - Matplotlib & Seaborn  
+  - Streamlit  
+- **Machine Learning Algorithm:** Perceptron  
+- **Feature Engineering:** TF-IDF Vectorization  
 
-Confusion Matrix analysis
+---
 
-🌐 6. Deployment
+## 📈 Model Performance
 
-Interactive Streamlit Web Application
+- **Test Accuracy:** ~88% – 92%  
+- **5-Fold Cross-Validation Accuracy:** ~65% – 72%  
 
-Real-time resume category prediction
+> Cross-validation provides a more realistic evaluation of the Perceptron model on multi-class resume data.
 
-🗂️ Dataset Information
+---
 
-The dataset contains resumes labeled with job categories.
+## 📊 Visualizations Included
 
-Key columns:
+- Resume category distribution  
+- Resume length distribution  
+- Top TF-IDF keywords  
+- Confusion matrix  
+- Model performance analysis  
 
-Resume_str – Resume text
+---
 
-Category – Job category label
+## 🌐 Streamlit Dashboard
 
-Sample Categories:
+An interactive **Streamlit dashboard** is built to:
+- Paste resume text
+- Predict job category instantly
+- Display results in a clean web interface
 
-HR
-
-Data Science
-
-Software Developer
-
-Web Developer
-
-DevOps
-
-Testing / QA
-
-⚙️ Tech Stack
-
-Language: Python
-
-Libraries:
-
-Pandas
-
-NumPy
-
-Scikit-Learn
-
-NLTK
-
-Matplotlib & Seaborn
-
-Streamlit
-
-ML Algorithm: Perceptron
-
-Feature Engineering: TF-IDF Vectorization
-
-📈 Model Performance
-
-Test Accuracy: ~88% – 92%
-
-5-Fold Cross-Validation Accuracy: ~65% – 72%
-
-Cross-validation provides a more realistic evaluation of the Perceptron model on multi-class resume data.
-
-📊 Visualizations Included
-
-Resume category distribution
-
-Resume length analysis
-
-Top TF-IDF keywords
-
-Confusion matrix
-
-Model accuracy insights
-
-🌐 Streamlit Dashboard
-
-An interactive Streamlit dashboard is implemented to:
-
-Paste resume text
-
-Predict job category instantly
-
-Display results in a clean web interface
-
-▶️ Run the application:
+### ▶️ Run the application locally:
+```bash
 streamlit run app.py
+```
 
-📁 Project Structure
+---
+
+## 📁 Project Structure
+
+```
 ├── app.py                  # Streamlit dashboard
 ├── Resume.csv              # Dataset
 ├── resume_model.ipynb      # Model training & analysis
 ├── README.md               # Project documentation
 └── requirements.txt        # Dependencies
+```
 
-🧪 Sample Prediction
+---
 
-Input:
+## 🧪 Sample Prediction
 
+**Input:**
+```
 Experienced Python developer with knowledge of machine learning,
 data analysis, pandas, numpy, and scikit-learn.
+```
 
-
-Output:
-
+**Output:**
+```
 Predicted Category: Data Science
+```
 
-🧠 Key Learnings
+---
 
-Practical implementation of NLP preprocessing
+## 🧠 Key Learnings
 
-Importance of feature engineering in text classification
+- Practical application of NLP preprocessing techniques
+- Importance of feature engineering in text classification
+- Understanding limitations of linear models like Perceptron
+- Model evaluation using cross-validation
+- Deploying ML models using Streamlit
 
-Understanding limitations of linear models like Perceptron
+---
 
-Model evaluation using cross-validation
+## 🚀 Future Enhancements
 
-Deploying ML models as web applications
+- Compare with Logistic Regression and Linear SVM
+- Add prediction confidence score
+- Enable resume upload (PDF format)
+- Deploy on Streamlit Cloud
+- Improve accuracy using advanced models
 
-🚀 Future Enhancements
+---
 
-Compare with Logistic Regression and Linear SVM
+## 👨‍💻 Author
 
-Add prediction confidence score
+**Sudhanshu Gocher**  
+Machine Learning & Data Science Enthusiast  
 
-Enable resume upload (PDF format)
+---
 
-Deploy on Streamlit Cloud
-
-Improve performance using advanced models
-
-👨‍💻 Author
-
-Sudhanshu Gocher
-Machine Learning & Data Science Enthusiast
-
-⭐ If you find this project helpful, consider giving it a star!
+⭐ If you find this project useful, consider giving it a star!
