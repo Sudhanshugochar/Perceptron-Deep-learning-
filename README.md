@@ -1,73 +1,80 @@
-📄 Resume Category Prediction using Perceptron & NLP
-📌 Project Overview
+📄 RESUME CATEGORY PREDICTION USING PERCEPTRON & NLP
+An NLP-Powered Machine Learning Project
+🚀 Project Overview
 
 This project focuses on building a Resume Category Prediction System using Natural Language Processing (NLP) and the Perceptron machine learning algorithm.
-The system automatically classifies resumes into predefined job categories based on their textual content.
+The system automatically analyzes resume content and classifies it into predefined job categories, helping automate the resume screening process.
 
-The goal of this project is to demonstrate text preprocessing, feature extraction, model training, evaluation, and deployment using Python and machine learning techniques.
+The project demonstrates the complete machine learning lifecycle, including data preprocessing, feature extraction, model training, evaluation, and deployment using Python.
 
 🎯 Problem Statement
 
-Manual screening of resumes is time-consuming and inefficient.
-This project aims to automate resume screening by predicting the most suitable job category for a resume using machine learning.
+Manual resume screening is time-consuming, repetitive, and inefficient.
+Recruiters often spend significant time reviewing resumes to identify suitable job roles.
+
+This project aims to automate resume screening by predicting the most suitable job category for a given resume using machine learning techniques.
 
 🧠 Solution Approach
 
-The solution follows a structured NLP and ML pipeline:
+The solution follows a structured NLP and Machine Learning pipeline:
 
-Data Loading
+📥 1. Data Loading
 
 Resume dataset containing resume text and job categories
 
-Text Preprocessing
+🧹 2. Text Preprocessing
 
 Removal of HTML tags
 
-Lowercasing text
+Conversion of text to lowercase
 
-Removing special characters and stopwords
+Removal of special characters and stopwords
 
 Lemmatization for word normalization
 
-Feature Extraction
+🔎 3. Feature Extraction
 
-TF-IDF (Term Frequency–Inverse Document Frequency)
+TF-IDF (Term Frequency – Inverse Document Frequency)
 
-Unigrams and bigrams
+Unigrams and Bigrams
 
-Dimensionality control using max_features
+Feature size optimization for efficiency
 
-Model Training
+🤖 4. Model Training
 
-Perceptron (linear classifier)
+Perceptron (Linear Classifier)
 
 Balanced class weights
 
-Regularization to avoid overfitting
+Regularization to reduce overfitting
 
-Model Evaluation
+📊 5. Model Evaluation
 
 Test accuracy
 
-Classification report
+Precision, Recall, and F1-score
 
-5-fold cross-validation
+5-fold Cross-Validation
 
-Confusion matrix
+Confusion Matrix analysis
 
-Deployment
+🌐 6. Deployment
 
-Interactive Streamlit dashboard for real-time resume classification
+Interactive Streamlit Web Application
 
-🗂️ Dataset
+Real-time resume category prediction
 
-Resume dataset containing:
+🗂️ Dataset Information
 
-Resume_str → Resume text
+The dataset contains resumes labeled with job categories.
 
-Category → Job category label
+Key columns:
 
-Common categories include:
+Resume_str – Resume text
+
+Category – Job category label
+
+Sample Categories:
 
 HR
 
@@ -81,9 +88,9 @@ DevOps
 
 Testing / QA
 
-⚙️ Technologies Used
+⚙️ Tech Stack
 
-Programming Language: Python
+Language: Python
 
 Libraries:
 
@@ -95,53 +102,51 @@ Scikit-Learn
 
 NLTK
 
-Matplotlib / Seaborn
+Matplotlib & Seaborn
 
 Streamlit
 
-Machine Learning Algorithm: Perceptron
+ML Algorithm: Perceptron
 
 Feature Engineering: TF-IDF Vectorization
 
-📊 Model Performance
+📈 Model Performance
 
-Test Accuracy: ~88–92% (single split)
+Test Accuracy: ~88% – 92%
 
-5-Fold Cross-Validation Accuracy: ~65–72%
+5-Fold Cross-Validation Accuracy: ~65% – 72%
 
-Cross-validation accuracy is lower due to the simplicity of the Perceptron model and the complexity of multi-class text data.
+Cross-validation provides a more realistic evaluation of the Perceptron model on multi-class resume data.
 
-Note: Cross-validation gives a more realistic estimate of model performance.
-
-📈 Visualizations Included
+📊 Visualizations Included
 
 Resume category distribution
 
-Resume length distribution
+Resume length analysis
 
 Top TF-IDF keywords
 
 Confusion matrix
 
-Model accuracy analysis
+Model accuracy insights
 
-🌐 Streamlit Web Application
+🌐 Streamlit Dashboard
 
-An interactive Streamlit dashboard is built to:
+An interactive Streamlit dashboard is implemented to:
 
 Paste resume text
 
 Predict job category instantly
 
-Display results in a user-friendly interface
+Display results in a clean web interface
 
-Run the app locally:
+▶️ Run the application:
 streamlit run app.py
 
 📁 Project Structure
 ├── app.py                  # Streamlit dashboard
 ├── Resume.csv              # Dataset
-├── resume_model.ipynb      # Jupyter Notebook (training & analysis)
+├── resume_model.ipynb      # Model training & analysis
 ├── README.md               # Project documentation
 └── requirements.txt        # Dependencies
 
@@ -157,39 +162,33 @@ Output:
 
 Predicted Category: Data Science
 
-📝 Key Learnings
+🧠 Key Learnings
 
-Practical application of NLP preprocessing techniques
+Practical implementation of NLP preprocessing
 
 Importance of feature engineering in text classification
 
 Understanding limitations of linear models like Perceptron
 
-Using cross-validation for reliable evaluation
+Model evaluation using cross-validation
 
-Deploying ML models using Streamlit
+Deploying ML models as web applications
 
 🚀 Future Enhancements
 
-Compare Perceptron with Logistic Regression and Linear SVM
+Compare with Logistic Regression and Linear SVM
 
-Add confidence scores for predictions
+Add prediction confidence score
 
-Enable resume upload in PDF format
+Enable resume upload (PDF format)
 
-Deploy the app on Streamlit Cloud
+Deploy on Streamlit Cloud
 
-Improve accuracy using advanced models
+Improve performance using advanced models
 
 👨‍💻 Author
 
 Sudhanshu Gocher
 Machine Learning & Data Science Enthusiast
 
-⭐ Acknowledgements
-
-Scikit-Learn documentation
-
-NLTK library
-
-Open-source resume datasets
+⭐ If you find this project helpful, consider giving it a star!
